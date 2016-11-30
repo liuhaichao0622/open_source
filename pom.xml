@@ -1,0 +1,161 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- <modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>esn-parent</artifactId>
+		<version>1.0.0</version>
+		<groupId>yonyou.esn</groupId>
+	</parent>
+	<artifactId>openapi-auth-demo</artifactId>
+	<packaging>war</packaging> -->
+	
+	<!-- 将项目从父工程中摘出来 -->
+	 <modelVersion>4.0.0</modelVersion>
+	  <groupId>com.yonyou.esn</groupId>
+	  <artifactId>openapi-auth-demo-provided</artifactId>
+	  <packaging>war</packaging>
+	  <version>0.0.1-SNAPSHOT</version>
+	  
+	<!-- 管理依赖jar包的版本号 -->  
+	<properties>
+	  <commonmark.version>0.7.1</commonmark.version>
+	  <servlet-api.version>2.5</servlet-api.version>
+	  <jsp-api.version>2.2</jsp-api.version>
+	  <jstl.version>1.2</jstl.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.atlassian.commonmark</groupId>
+			<artifactId>commonmark</artifactId>
+			<version>${commonmark.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		    <version>1.3.2</version>
+		</dependency>
+				
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>2.6.3</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.6.3</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.7</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>log4j-over-slf4j</artifactId>
+		    <version>1.7.7</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>jcl-over-slf4j</artifactId>
+		    <version>1.7.7</version>
+		</dependency>
+		
+		<!-- 配置logback -->
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>1.1.7</version>
+		</dependency>
+				
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.0.9.RELEASE</version>
+		</dependency>
+			
+		<!-- 依赖的web类库 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+			<scope>compile</scope>
+		</dependency>
+				
+		<dependency>
+			<groupId>commons-codec</groupId>
+   			<artifactId>commons-codec</artifactId>
+   			<version>1.9</version>
+   		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>1.3.2</version>
+		</dependency>
+				
+		
+		
+		
+		
+		
+		
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.5</version>
+		</dependency>
+				
+		
+		<dependency>
+ 		   <groupId>org.springframework.session</groupId>
+ 		   <artifactId>spring-session</artifactId>
+ 		   <version>1.2.2.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.3.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6.1</version>
+		</dependency>
+
+	</dependencies>
+</project>
