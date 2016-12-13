@@ -6,23 +6,21 @@
 
 
 特别说明: (1) 在添加套件过程中填写的"回调url" 示例:"http://具有外网的ip:port/项目路径(如果有)/yyisv/ticket"
-    	 (2) 开放平台官网[测试地址]：http://121.42.30.191:8092/developer/login/login_page
-                          开放平台[线上地址]：http://open.upesn.com
+    	 (2) 开放平台[线上地址]：http://open.upesn.com
          (3) 解密消息异常java.security.InvalidKeyException:illegal Key Size的解决方案
- 			* <ol>
- 			* <li>在官方网站下载JCE无限制权限策略文件（JDK7的下载地址：
+ 			* 
+ 			* 在官方网站下载JCE无限制权限策略文件（JDK7的下载地址：
  			* http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html
-			* </li>
- 			* <li>下载后解压，可以看到local_policy.jar和US_export_policy.jar以及readme.txt</li>
-			* <li>如果安装了JRE，将两个jar文件放到%JRE_HOME%\lib\security目录下覆盖原来的文件</li>
- 			* <li>如果安装了JDK，将两个jar文件放到%JDK_HOME%\jre\lib\security目录下覆盖原来文件</li>
-			* </ol>
+ 			* 下载后解压，可以看到local_policy.jar和US_export_policy.jar以及readme.txt
+			* 如果安装了JRE，将两个jar文件放到%JRE_HOME%\lib\security目录下覆盖原来的文件
+ 			* 如果安装了JDK，将两个jar文件放到%JDK_HOME%\jre\lib\security目录下覆盖原来文件
+			* 
 		 (4) conf.properties文件说明:
 		    "isv_auth_suite_key"为套件创建成功后生成的"套件key(亦称作套件id)" [必须]
 		    "isv_auth_suite_secret"为套件创建成功后生成的"套件secret" [必须]
 		    "isv_auth_aes_key"为创建套件时填写的"EncodingAESKey",即加解密参数 [必须]
 		    "isv_auth_token"为创建套件时填写的"Token",用于解密 [必须]
-		    "isv_auth_base_path"为开放平台服务的项目跟路径(上线后需改成线上地址) [必须]
-		    
-		    "isv_push_base_path"用于手动推送ticket服务的operation-server项目跟路径,不必等每10分钟推送一次。(可不用设置)
+		    "isv_auth_base_path"为开放平台服务的项目跟路径(无需改动) [必须]
+		 (5)!!特别注意的是!! --> 强烈建议您把接收到的"suiteKey"、"空间Id"和"永久授权码"持久化到数据库中
+		 	用于标识 "哪个空间的哪个套件被授权!"
 		   
