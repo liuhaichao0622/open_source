@@ -48,6 +48,11 @@ public class AuhtISVController {
 	private static String TEMP_CODE;
 	
 	/**
+	 * 套件授权 空间Id
+	 */
+	private static String QZ_ID;
+	
+	/**
 	 * 永久授权码
 	 */
 	private static String PERMANENT_CODE;
@@ -102,8 +107,9 @@ public class AuhtISVController {
 			//从ticket中解析出tempCode
 			String tempCode = xmlMap.get("AuthorizationCode");
 			TEMP_CODE = tempCode;
-			LOG.info("成功接收临时授权码="+tempCode);
-			
+			String qzId = xmlMap.get("AuthCropId");
+			QZ_ID = qzId;
+			LOG.info("空间Id="+QZ_ID+"的空间,成功接收临时授权码="+tempCode);
 			//如果推送的是临时授权码则进行授权动作
 			//授权过程:   suite_token-->临时授权码-->永久授权码
 			//suiteKey+suiteSecret+suiteTicket --> suiteToken
